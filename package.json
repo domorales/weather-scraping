@@ -1,0 +1,19 @@
+{
+  "name": "web-scraping",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon bin/server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.16.4",
+    "http-errors": "^1.6.3",
+    "morgan": "^1.9.1",
+    "pug": "^3.0.2",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

@@ -1,0 +1,137 @@
+:root {
+  --primary: #073b4c;
+  --secondary: #118ab2;
+  --details: #073b4c;
+  --color-font: #f1faee;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--primary);
+  color: var(--color-font);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.container_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.container_info-basic_information {
+  flex: 3;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container_info-title {
+  font-size: 2rem;
+  flex: 1;
+}
+
+.container_detail {
+  flex-basis: 60%;
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--secondary);
+}
+
+.container_detail-detail_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+}
+
+.container_detail-detail_info-item {
+  flex-basis: 40%;
+  flex-grow: 1;
+  display: flex;
+  height: 4rem;
+  margin: 1rem;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  align-items: center;
+  padding-left: 2%;
+  color: #ffd166;
+  background: var(--details);
+}
+
+.container_detail-detail_info-item span{
+  text-indent: 1rem;
+}
+
+.container_detail-detail_days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.container_detail-detail_days-card_day {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  flex-basis: 8rem;
+  height: 11.2rem;
+  border-radius: 16px;
+  background: var(--details);
+  transition: all .2s ease-in-out;
+}
+
+.container_detail-detail_days-card_day > *{
+  margin-top: 0.2rem;
+}
+
+.container_detail-detail_days-card_day h3 {
+  font-size: 1.5rem;
+}
+
+.container_detail-detail_days-card_day-high_temp {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #e63946;
+}
+
+.container_detail-detail_days-card_day span {
+  display: block;
+}
+
+.container_detail-detail_days-card_day-img {
+  width: 80%;
+  height: 40%;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+}

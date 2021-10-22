@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  section.container
+    article.container_info
+      div.container_info-title
+        h1= weatherInfo.location
+      div.container_info-basic_information
+        img.container_info-basic_information-img(alt=weatherInfo.phraseValue)
+        div
+          span= weatherInfo.tempValue
+        div
+          span= weatherInfo.phraseValue
+    article.container_detail
+      div.container_detail-detail_info
+        div.container_detail-detail_info-item
+          span 🌬Wind: #{detailsWeatherToday.wind}
+        div.container_detail-detail_info-item
+          span 🌴Humadity: #{detailsWeatherToday.humidity}
+        div.container_detail-detail_info-item
+          span 🌡Pressure: #{detailsWeatherToday.pressure}
+        div.container_detail-detail_info-item
+          span 👀Visibility: #{detailsWeatherToday.visibility}
+      div.container_detail-detail_days
+        each dataDay in weatherInfoFiveDays
+          div.container_detail-detail_days-card_day
+            h3= dataDay.day
+            img.container_detail-detail_days-card_day-img(alt=dataDay.phraseValue)
+            div
+              span.container_detail-detail_days-card_day-high_temp= dataDay.highTempValue
+              span.container_detail-detail_days-card_day-low_temp= dataDay.lowTempValue
+            div
+              span 🌧 #{dataDay.precipPercentage}
+    script(src='/javascripts/weather.js' type='module')
+
+
